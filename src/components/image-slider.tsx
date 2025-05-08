@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import Image from "next/image"
+import Image from "next/legacy/image"
 
 const images = [
   "/1.jpg",
@@ -69,7 +69,7 @@ export function ImageSlider() {
             <Image
               src={image || "/placeholder.svg"}
               alt={`Slide ${index + 1}`}
-              fill
+              layout="fill"
               className="object-cover rounded-xl"
               priority={index === 0}
               sizes="100vw"
